@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
+*{
+    text-decoration:none
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #2c3a47;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+nav{
+    background-color: black;
+    position: sticky;
+    top:0;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items: center;
+}
+nav h1{
+    margin-left: 30px;
+    margin-right: 30px;
+    text-shadow: -3px 0 black, 0 1px black,-3px 0 black, 0 -1px black;
+    color:#12a7cc;
+    font-family: 'Playfair Display', serif;
+    font-size: 50px;
+}
+nav .onglets{
+    margin-top: 3px;
+    margin-left: 300px;
+}
+nav .onglets a{
+    text-decoration: none;
+    color: #12a7cc;
+    margin-right: 10px;
+    border-bottom: 1px solid #12a7cc;
+    padding-bottom: 5px;
+}
+
+header{
+    box-shadow: 10px 5px 5px black;
+    background-color: #2c3a47;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url('https://img.chefdentreprise.com/Img/BREVE/2021/7/362177/Jeu-video-comment-France-impose-comme-acteur-majeur--F.jpg');
+    background-size: cover;
+    color: #32f1d8;
+    padding: 80px;
+}
+header h1{
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    text-shadow: 0.1em 0.1em 0.2em black;
+}
+header h4{
+    margin-top: -20px;
+    font-size: 20px;
+    text-align: center;
+    text-shadow: 0.1em 0.1em 0.2em black;
+}
+
+header button{
+    box-shadow: 5px 5px 5px black;
+    padding: 10px 20px;
+    background-color: #fff;
+    color:rgb(56, 17, 17);
+    border:none;
+    margin-bottom: 30px;
+    outline:none;
+    font-size: 20px;
+    font-family: 'Playfair Display', serif;
+    cursor: pointer;
+}
+
+.main{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main .content .card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom:20px;
+}
+.main .content .card .left{
+   box-shadow: 10px 10px 5px black;
+   flex: 0 0 30%;
+   padding: 20px;
+   background-color: #12a7cc;
+}
+.main .content .card .right img{
+    box-shadow: 10px 10px 5px black;
+    height:300px;
+    width: 400px;
+    margin-top: 5px;
+}
+
+footer{
+    margin-top: 40px;
+    border-top: 5px solid #000000;
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    padding: 30px 100px;;
+}
+footer h1{
+    font-family: 'Playfair Display', serif;
+    border-bottom: 1px solid white;
+    width:12%;
+    padding-bottom: 5px;
+}
+footer .services{
+    margin-top: -10px;
+    margin-left: 70px;
+    display:flex;
+    flex-wrap:wrap;
+}
+footer .services .sm{
+    margin-left: 100px;
+    margin-top: 20px;
+}
+footer .services .sm p{
+    max-width: 300px;
+}
+footer #contact{
+    color: rgb(181, 181, 181);
+}
+
+@media screen and (max-width:680px){
+    nav .onglets {
+        font-size: 20px;
+        color: #000000;
+        margin-left: 0px;
+        margin-bottom: 20px;
+    }
+    .main .card {
+        margin: 10px;
+    }
+    .main .content .card .right img{
+        height:200px;
+        width: 100%;
+        margin-top: -0px;
+    }
+    .main .content .card{
+        display: block;
+    }
+    footer{
+        padding: 30px;
+    }
+}
+
+.sm a{
+    display: inline-block;
+    font-size: 40px;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    color: #12a7cc;
+    margin: 0 16px;
+    transition: .4s linear;
+    position: relative;
+  }
+  
+  .sm a::before, .sm a::after{
+    margin-top: -20px;
+    
+    content: '';
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transition: .4s linear;
+  }
+  
+  .sm a:hover{
+    transform: scale(.8);
+  }
+  
+  .sm a:hover::before{
+    border-left: 4px solid;
+    border-right: 4px solid;
+    transform: skewX(20deg);
+  }
+  
+  .sm a:hover::after{
+    border-top: 4px solid;
+    border-bottom: 4px solid;
+    transform: skewY(-20deg);
+  }
+
+  .fantome{
+    width: 70px;
+    height: 80px;
+    background-color: #f2f2f2;
+    border-radius: 35px 35px 0 0;
+    position: relative;
+    cursor: pointer;
+    animation: floating 2s infinite ease-in-out; 
+}
+
+@keyframes floating{
+    50%{
+        transform: translateY(-20px);
+    }
+}
+
+.tete{
+    margin-left: 15px;
+    width: 50px;
+    position: absolute;
+    top: 30px;
+    left: calc(25% - 25px);
+}
+
+.yeux{
+    height: 12px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 7px;
+}
+
+.yeux span{
+    width: 12px;
+    height: 12px;
+    background-color: black;
+    border-radius: 50%;
+    transition: .3s linear;
+}
+
+.fantome:hover .yeux span{
+    height: 8px;
+}
+
+.bouche{
+    width: 20px;
+    height: 10px;
+    background-color: black;
+    margin: auto;
+    border-radius: 0 0 10px 10px;
+    transition: .3s linear;
+}
+
+.fantome:hover .bouche{
+    height: 6px;
+}
+
+.mains{
+    width: 90px;
+    position: absolute;
+    left: -10px;
+    top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mains span{
+    width: 20px;
+    height: 20px;
+    background-color: #f2f2f2;
+}
+
+.mains span:first-child{
+    border-radius: 10px 0 0 10px;
+}
+
+.mains span:last-child{
+    border-radius: 0 10px 10px 0;
+}
+
+.corps{
+    position: absolute;
+    width: 100%;
+    bottom: -10px;
+    display: flex;
+}
+
+.corps span{
+    flex: 1;
+    height: 10px;
+    background-color: #f2f2f2;
+    border-radius: 0 0 10px 10px;
+}
+
+.corps span:first-child{
+    border-radius: 0 0 10px 6px;
+}
+.corps span:last-child{
+    border-radius: 0 0 6px 10px;
+}
+
